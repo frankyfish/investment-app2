@@ -18,12 +18,14 @@ export class UserInputComponent {
   duration?: number
 
   onUserInputSubmit() {
-    this.userInput.emit({
+    let input: UserInput = {
       initialInvestment: this.initialInvestment!,
       annualInvestment: this.anualInvestment!,
       expectedReturn: this.expectedReturn!,
       duration: this.duration!
-    })
+    }
+    console.log(input)
+    this.userInput.emit(input)
   }
 
 }

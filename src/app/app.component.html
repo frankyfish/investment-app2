@@ -1,7 +1,7 @@
 <app-header/>
 <app-user-input (userInput)="onUserSubmittedInput($event)"/>
 @if (submittedUserInput) {
-    <app-investment-results [submittedUserData]="submittedUserInput"/>
+    <app-investment-results [investmentResult]="calculatedInvestmentResults"/>
 } @else {
     <p>Please enter some values and press "Calculate"</p>
 }

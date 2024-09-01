@@ -1,3 +1,4 @@
+@if (investmentResult) {
 <table>
     <thead>
         <tr>
@@ -9,8 +10,16 @@
         </tr>
     </thead>
     <tbody>
-        @for (item of annualData; track $index) {
-            
+        @for (item of investmentResult; track $index) {
+        <tr>
+            <td>{{item.year}}</td>
+            <td>{{item.interest}}</td>
+            <td>{{item.valueEndOfYear}}</td>
+            <td>{{item.annualInvestment}}</td>
+            <td>{{item.totalInterest}}</td>
+            <td>{{item.totalAmountInvested}}</td>
+        </tr>
         }
     </tbody>
 </table>
+}
